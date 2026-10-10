@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PyForge</title>
+<meta name="description" content="Learn real Python by building games, apps, automations and AI tools. Free in your browser, and on iPhone, iPad and Mac.">
+<link rel="icon" href="icon.png">
+<style>
+  :root { --bg: #15111f; --bg2: #1b1628; --panel: #221c33; --line: #3a3256; --ink: #efeaff; --muted: #a99fc6; --ember: #ff7a3d; --gold: #ffc94d; --ice: #6fd3ff; --leaf: #4be38f; --violet: #c58bff; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  a { color: inherit; }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 16px; }
+  nav { display: flex; align-items: center; gap: 12px; padding: 18px 0; }
+  nav img { width: 34px; height: 34px; border-radius: 9px; }
+  nav b { font-size: 20px; flex: 1; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 15px; }
+  .hero { padding: 56px 0 40px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+  h1 { font-size: clamp(36px, 6vw, 60px); line-height: 1.05; margin: 0 0 16px; letter-spacing: -.02em; }
+  h1 em { font-style: normal; color: var(--ember); }
+  .lead { color: var(--muted); font-size: 19px; margin: 0 0 26px; }
+  .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 14px 22px; border-radius: 14px; font-weight: 700; text-decoration: none; background: var(--ember); color: #1a0d05; box-shadow: 0 3px 0 #b6491b; }
+  .btn.ghost { background: var(--panel); color: var(--ink); box-shadow: 0 3px 0 var(--line); }
+  .code { background: #0f0c18; border: 1px solid var(--line); border-radius: 18px; padding: 20px; font: 14.5px/1.65 ui-monospace, Menlo, monospace; color: #d8d0f5; white-space: pre; overflow-x: auto; }
+  .k { color: #ff8fb8; } .f { color: var(--ice); } .s { color: var(--gold); } .c { color: #6f6890; }
+  section { padding: 44px 0; }
+  h2 { font-size: 30px; margin: 0 0 8px; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 8px; }
+  .stages { display: grid; gap: 10px; }
+  .stage { display: flex; gap: 14px; align-items: baseline; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+  .stage b { font-size: 26px; min-width: 26px; }
+  .stage span { color: var(--muted); font-size: 15.5px; }
+  .free { font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 99px; background: rgba(75, 227, 143, .15); color: var(--leaf); margin-left: 6px; }
+  details { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { color: var(--muted); margin: 8px 0 0; }
+  footer { padding: 36px 0 56px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+  footer a { margin-right: 16px; }
+  @media (max-width: 820px) { .hero { grid-template-columns: 1fr; padding-top: 24px; } .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><img src="icon.png" alt=""><b>PyForge</b><a href="#curriculum">Curriculum</a><a href="#help">Help</a></nav>
+
+  <div class="hero">
+    <div>
+      <h1>Learn Python by <em>building real things.</em></h1>
+      <p class="lead">Pong, a star shooter and a platformer. A weather app, a calculator and bots that automate your life. Real Python 3.13 with pandas, running right on your device, with Nova as your guide.</p>
+      <div class="btns">
+        <a class="btn" href="play/">Start free in your browser</a>
+        <a class="btn ghost" href="https://apps.apple.com/app/idYOUR-APP-ID">Get it for iPhone, iPad &amp; Mac</a>
+      </div>
+    </div>
+    <div class="code"><span class="c"># Step 3 of 6: get the ball moving</span>
+<span class="k">def</span> <span class="f">update</span>(dt):
+    <span class="k">global</span> ball_x, ball_y, vx, vy
+    ball_x += vx * dt
+    ball_y += vy * dt
+    <span class="k">if</span> ball_y &lt; <span class="s">0</span> <span class="k">or</span> ball_y &gt; HEIGHT:
+        vy = -vy
+        sound.play(<span class="s">"bounce"</span>)</div>
+  </div>
+
+  <section>
+    <h2>Not toy programs</h2>
+    <p class="sub">Every lesson is something you'd actually use, and every project comes to life on screen as you build it, one piece at a time.</p>
+    <div class="grid">
+      <div class="card"><h3><span class="dot" style="background:var(--ember)"></span>Games you build</h3><p>Pong, Snake, Minesweeper, Breakout, Flappy, a star shooter with power-ups and a scrolling platformer. Play them full screen when they're done.</p></div>
+      <div class="card"><h3><span class="dot" style="background:var(--gold)"></span>Apps with screens</h3><p>A phone-style calculator, a live weather app and a habit tracker with streaks and a heatmap.</p></div>
+      <div class="card"><h3><span class="dot" style="background:var(--leaf)"></span>Automate your life</h3><p>Rename and sort files, read spreadsheets and PDFs, clean data with pandas, pull from web APIs.</p></div>
+      <div class="card"><h3><span class="dot" style="background:var(--ice)"></span>Block World</h3><p>Script a blocky 3D world in Python: pyramids, fractal trees, villages and terrain. The skills carry straight into game-engine scripting.</p></div>
+      <div class="card"><h3><span class="dot" style="background:var(--violet)"></span>AI, explained by building</h3><p>Prompts, structured output, embeddings and a study bot that answers from your own notes.</p></div>
+      <div class="card"><h3><span class="dot" style="background:#ff8fb8"></span>Interview-ready</h3><p>Sorting, recursion, two pointers, BFS and dynamic programming, plus a Dojo with 66 puzzles (including spotting the bugs AI assistants make) and a daily challenge.</p></div>
+      <div class="card"><h3><span class="dot" style="background:var(--ice)"></span>A real debugger</h3><p>Step through any program one line at a time and watch every variable change. The fastest way to understand code, and to fix it.</p></div>
+      <div class="card"><h3><span class="dot" style="background:var(--gold)"></span>Databases &amp; web APIs</h3><p>SQL with SQLite, safe queries, and a REST API you build from scratch with routes, JSON and status codes.</p></div>
+      <div class="card"><h3><span class="dot" style="background:var(--leaf)"></span>Code like the job</h3><p>Solo projects from a blank file, bug reports on code you didn't write, refactoring with tests, and security basics.</p></div>
+    </div>
+  </section>
+
+  <section id="curriculum">
+    <h2>From your first line to serious coder</h2>
+    <p class="sub">25 units and 43 projects, including solo projects with no scaffolding and maintenance jobs on existing code. Already know some Python? Take the placement test, or pass any unit's challenge to skip ahead.</p>
+    <div class="stages">
+      <div class="stage"><b style="color:var(--ember)">1</b><div><strong>Foundations</strong><span class="free">FREE</span><br><span>Values, decisions, loops, text and functions. Primes, palindromes, a guessing game, a cipher.</span></div></div>
+      <div class="stage"><b style="color:var(--gold)">2</b><div><strong>Data &amp; Problem Solving</strong><span class="free">FREE</span><br><span>Lists, dictionaries, grids, sorting and recursion. Word search, tic-tac-toe, a sorting race, maze solving.</span></div></div>
+      <div class="stage"><b style="color:var(--leaf)">3</b><div><strong>Real Programs</strong><br><span>Files, debugging, classes, closures, generators and decorators. A bank system, your own test framework, Star Shooter.</span></div></div>
+      <div class="stage"><b style="color:var(--ice)">4</b><div><strong>Python Meets Real Life</strong><br><span>The internet, pandas, databases and SQL, automation, apps and AI. A web API, a weather app, a calculator.</span></div></div>
+      <div class="stage"><b style="color:var(--violet)">5</b><div><strong>Serious Coder</strong><br><span>Interview patterns, professional tools (Git, tests, the terminal, security), game scripting in Lua, and a capstone app.</span></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>New challenges every week</h2>
+    <p class="sub">New puzzles and projects arrive in the app on their own, no update needed. Bookmark this page or <a href="play/">open the web version</a> to try them first.</p>
+  </section>
+
+  <section id="help">
+    <h2>Help</h2>
+    <details><summary>What do I get for free?</summary><p>Stages 1 and 2 (10 units, their projects, the first solo project, the debugger, Pong, Snake, Minesweeper, the sorting visualizer and the first Block World builds), the Lab, and the free Dojo puzzles. The free version has ads.</p></details>
+    <details><summary>What's in PyForge Pro?</summary><p>Stages 3 to 5, every game and Block World build, every Dojo puzzle, unlimited practice, certificates for every stage, and no ads. Monthly, yearly (with a 7-day free trial) or a one-time lifetime purchase.</p></details>
+    <details><summary>How do I cancel a subscription?</summary><p>On your iPhone or iPad: Settings → your name → Subscriptions → PyForge. Or in the app: Me → PyForge Pro → Manage.</p></details>
+    <details><summary>I bought Pro on another device.</summary><p>Open the Pro screen and tap Restore purchases while signed in with the same Apple ID.</p></details>
+    <details><summary>Does my code really run Python?</summary><p>Yes, real Python 3.13 (CPython compiled to WebAssembly), with pandas, numpy, requests, BeautifulSoup, openpyxl and pypdf. It runs on your device, even offline.</p></details>
+    <details><summary>Is it affiliated with any game company?</summary><p>No. PyForge teaches Python and the scripting skills used by many game engines. It isn't affiliated with or endorsed by any game company.</p></details>
+    <details><summary>Something's broken, or I have an idea</summary><p>Email <a href="mailto:sagarika125@gmail.com">sagarika125@gmail.com</a>. Include your device and what you were doing, and we'll get back to you.</p></details>
+  </section>
+
+  <footer><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a><a href="mailto:sagarika125@gmail.com">Contact</a><br><br>© 2026 PyForge</footer>
+</div>
+</body>
+</html>

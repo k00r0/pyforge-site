@@ -1,0 +1,7 @@
+/play/content/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: no-cache
+/play/vendor/*
+  Cache-Control: public, max-age=604800
+/play/*.wasm
+  Content-Type: application/wasm
